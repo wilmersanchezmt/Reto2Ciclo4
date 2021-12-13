@@ -38,7 +38,7 @@ function validar2() {
       dataType: 'JSON',
       
   
-      url: "http://140.238.187.245:8082/api/user/" + credentials.email + "/" + credentials.clave,
+      url: "http://localhost:8082/api/user/" + credentials.email + "/" + credentials.clave,
       // url: "http://140.238.187.245:8081/api/user/wilmerandressr@hotmail.com/123",
   
       success: function (response) {

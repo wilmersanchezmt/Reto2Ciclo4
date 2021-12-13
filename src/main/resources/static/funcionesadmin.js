@@ -6,7 +6,7 @@ function mostrartablausuarios() {
     $.ajax({
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        url: "http://140.238.187.245:8082/api/user/all",
+        url: "http://localhost:8082/api/user/all",
         type: 'GET',
         // data: JSON.stringify(datos),
 
@@ -70,7 +70,7 @@ function validarusuario() {
     $.ajax({
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        url: "http://140.238.187.245:8082/api/user/emailexist/" + elemento2.email,
+        url: "http://localhost:8082/api/user/emailexist/" + elemento2.email,
         type: 'GET',
 
         success: function (response10) {
@@ -111,7 +111,7 @@ function registroUsuarios() {
     $.ajax({
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        url: "http://140.238.187.245:8082/api/user/new",
+        url: "http://localhost:8082/api/user/new",
         type: 'POST',
         data: dataToSend6,
 
@@ -133,7 +133,7 @@ function obtenerUsuario(idItem2) {
         data: {
             idItem2
         },
-        url: "http://140.238.187.245:8082/api/user/all",
+        url: "http://localhost:8082/api/user/all",
         type: 'GET',
         success: function (response8) {
             console.log("traemos todos los ITEM")
@@ -191,7 +191,7 @@ function actualizarusuario() {
         dataType: 'json',
         data: dataToSend,
         contentType: 'application/json',
-        url: "http://140.238.187.245:8082/api/user/update",
+        url: "http://localhost:8082/api/user/update",
         type: 'PUT',
 
         success: function (response9) {
@@ -222,7 +222,7 @@ function borrarUsuario(iduser) {
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
         // data: dataToSend,
-        url: "http://140.238.187.245:8082/api/user/" + dataToSend,
+        url: "http://localhost:8082/api/user/" + dataToSend,
         type: 'DELETE',
 
         success: function (response7) {
@@ -243,7 +243,7 @@ function traerInformacionProductos() {
     $("#miResultadomensajes").html("");
     console.log("iniciamos consulta a db");
     $.ajax({
-        url: "http://140.238.187.245:8082/api/chocolate/all",
+        url: "http://localhost:8082/api/chocolate/all",
         type: "GET",
         datatype: "JSON",
         success: function (respuesta) {
@@ -306,7 +306,7 @@ function validarproducto() {
     $.ajax({
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        url: "http://140.238.187.245:8082/api/chocolate/" + elemento2.reference,
+        url: "http://localhost:8082/api/chocolate/" + elemento2.reference,
         type: 'GET',
         success: function (response10) {
             console.log("positivo respuest de consulta get con referencia");
@@ -350,7 +350,7 @@ function registroProducto() {
     $.ajax({
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        url: "http://140.238.187.245:8082/api/chocolate/new",
+        url: "http://localhost:8082/api/chocolate/new",
         type: 'POST',
         data: dataToSend7,
         success: function (response2) {
@@ -373,7 +373,7 @@ function editarProducto(idItem2) {
     $.ajax({
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
-        url: "http://140.238.187.245:8082/api/chocolate/all" ,
+        url: "http://localhost:8082/api/chocolate/all" ,
         type: 'GET',
         success: function (response8) {
             console.log("traemos todos los ITEM")
@@ -422,7 +422,7 @@ function actualizarproducto() {
         dataType: 'json',
         data: dataToSend,
         contentType: 'application/json',
-        url: "http://140.238.187.245:8082/api/chocolate/update",
+        url: "http://localhost:8082/api/chocolate/update",
         type: 'PUT',
 
         success: function (response9) {
@@ -444,7 +444,7 @@ function borrarProducto(item5) {
         dataType: 'JSON',
         contentType: "application/json; charset=utf-8",
         // data: dataToSend,
-        url: "http://140.238.187.245:8082/api/chocolate/" + item5,
+        url: "http://localhost:8082/api/chocolate/" + item5,
         type: 'DELETE',
         data: item5,
 
